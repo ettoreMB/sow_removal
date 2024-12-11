@@ -1,29 +1,47 @@
-// document.getElementById("quoteForm").addEventListener("submit", function (e) {
-//   e.preventDefault();
 
-//   const name = document.getElementById("name").value;
-//   const age = parseInt(document.getElementById("age").value);
-//   const landSize = parseInt(document.getElementById("landSize").value);
-//   const result = document.getElementById("quoteResult");
 
-//   if (age < 18) {
-//       result.innerHTML = `<p>Sorry, you must be at least 18 years old to request a quote.</p>`;
-//       return;
-//   }
 
-//   const pricePerSqFt = 0.1;
-//   const discount = 0.2; // 20% discount for summer
-//   let estimatedPrice = landSize * pricePerSqFt;
-//   estimatedPrice -= estimatedPrice * discount;
+document.getElementById("quote-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+  const name = document.getElementById("name").value;
+  const age = parseInt(document.getElementById("age").value);
+  const landSize = parseInt(document.getElementById("landSize").value);
+  const result = document.getElementById("quoteResult");
 
-//   result.innerHTML = `
-//       <h3>Quote Summary</h3>
-//       <p>Name: ${name}</p>
-//       <p>Age: ${age}</p>
-//       <p>Land Size: ${landSize} sq ft</p>
-//       <p>Estimated Price: $${estimatedPrice.toFixed(2)}</p>
-//   `;
-// });
+  if (!name) {
+    alert("Please enter a valid name.");
+    return;
+  }
+  
+  if (age < 18 ) {
+    alert("Sorry, you must be at least 18 years old to request a quote.");
+    return;
+  }
+
+  if (landSize === 0) {
+    alert("Please enter a valid land size.");
+    return;
+  }
+
+  const pricePerSqFtSnowRemoval = 20;
+  const pricePerSqFtLawnMoving = 30;
+
+  const summerDiscount = 0.2; 
+
+  let estimatedPriceSnowRemoval = landSize * pricePerSqFtSnowRemoval;
+  let estimatedPriceLawn = landSize * pricePerSqFtLawnMoving;
+
+  result.classList.remove("hidden");
+  result.innerHTML = `
+      <h3>Quote Summary</h3>
+      <p>Name: ${name}</p>
+      <p>Age: ${age}</p>
+      <p>Land Size: ${landSize} sq ft</p>
+      <p>Estimated Snow removal Price: $${estimatedPriceSnowRemoval.toFixed(2)} <span>Summer disccount $${estimatedPriceSnowRemoval * summerDiscount}</span></p>
+      <p>Estimated Lawn removal Price: $${estimatedPriceLawn.toFixed(2)} <span>Summer disccount $${estimatedPriceLawn * summerDiscount}</span></p>
+  `;
+});
 
 
 const dropDownMenuButton = document.getElementById("drop-down-menu-button");

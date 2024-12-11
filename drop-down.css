@@ -1,15 +1,7 @@
 
   
   /* Dropdown button */
-  #drop-down-menu-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-  }
+
   
   /* Dropdown content */
   #drop-down-menu-box {
@@ -50,8 +42,6 @@
     transition: background-color 0.3s ease;
   }
    
-  /* Hidden class to hide dropdown content */
-  .hidden {
-    display: none;
-  }
+
+ 
   

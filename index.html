@@ -19,7 +19,7 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li>
-                    <a href="#" id="drop-down-menu-button" >Other Services</a>
+                    <a href="#" id="drop-down-menu-button" class="button" >Other Services</a>
                     <div id="drop-down-menu-box" class="hidden">
                         <ul>
                             <li><a href="#">Lawn Mowing</a></li>
@@ -40,11 +40,11 @@
       </div>
       <div class="hero-form">
         <h1>GET A QUOTE</h1>
-        <form action="">
+        <!-- <form action="">
             <input type="text" placeholder="Enter your zip code">
             <button type="submit">Get a Quote</button>
             <a href="https://www.example-lawncare.com" target="_blank">Learn More</a>
-        </form>
+        </form> -->
       </div>
       
     </section>
@@ -64,6 +64,12 @@
        </div>
     </section>
 
+     <!-- Promotions Section -->
+     <section id="promotions">
+        <h2>Special Offers</h2>
+        <p>Get <span class="promotion-price">20%</span> off during summer for lawn care  and snow removal services!!!</p>
+    </section>
+
     <!-- Pricing Section -->
     <section id="pricing">
         <h1>Our Prices</h1>
@@ -77,7 +83,7 @@
                     </div>
                     <div class="period-card-item">
                         <div class="item-title">Lawn Moving</div>
-                        <div class="item-price"><strong>$</strong><span>20</span></div>
+                        <div class="item-price"><strong>$</strong><span>30</span></div>
                     </div>
                 </div>
                 <span class="period-card-note">Prices per sq ft</span>
@@ -88,11 +94,11 @@
                 <div class="period-card-items">
                     <div class="period-card-item">
                         <div class="item-title">Snow Removal</div>
-                        <div class="item-price"><strong>$</strong><span>20</span></div>
+                        <div class="item-price"><strong>$</strong><span>18</span></div>
                     </div>
                     <div class="period-card-item">
                         <div class="item-title">Lawn Moving</div>
-                        <div class="item-price"><strong>$</strong><span>20</span></div>
+                        <div class="item-price"><strong>$</strong><span>28</span></div>
                     </div>
                 </div>
                 <span class="period-card-note">Prices per sq ft</span>
@@ -103,18 +109,41 @@
                 <div class="period-card-items">
                     <div class="period-card-item">
                         <div class="item-title">Snow Removal</div>
-                        <div class="item-price"><strong>$</strong><span>20</span></div>
+                        <div class="item-price"><strong>$</strong><span>15</span></div>
                     </div>
                     <div class="period-card-item">
                         <div class="item-title">Lawn Moving</div>
-                        <div class="item-price"><strong>$</strong><span>20</span></div>
+                        <div class="item-price"><strong>$</strong><span>25</span></div>
                     </div>
                 </div>
                 <span class="period-card-note">Prices per sq ft</span>
             </div>
             
         </div>
-        <div class="payment-methods">
+       
+    </section>
+
+
+
+    <!-- Quote Request Form -->
+    <section id="quote">
+        <h2>Get a quick Quote</h2>
+       <div class="quote-items">
+        <form id="quote-form" >
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+            <label for="landSize">Land Size (sq ft):</label>
+            <input type="number" id="landSize" required>
+            <button type="submit" class="button">Submit</button>
+        </form>
+        <div id="quoteResult" class="hidden"></div>
+       </div>
+    </section>
+
+    <div class="payment-methods">
+        <div class="">
             <h1>Payment Methods</h1>
             <div class="payment-methods-list">
                 <div class="payment-method">
@@ -126,51 +155,37 @@
                         <img src="https://www.pngmart.com/files/16/Paypal-Logo-PNG-HD.png" alt="">
                         <p>PayPal</p>
                     </div>
-
-                    
+                </div>
+            </div>
         </div>
-    </section>
-
-
-    <!-- Promotions Section -->
-    <section id="promotions">
-        <h2>Special Offers</h2>
-        <p>Get <span class="promotion-price">20%</span> off during summer for lawn care services!</p>
-    </section>
-
-
-    <!-- Quote Request Form -->
-    <section id="quote">
-        <h2>Get a Quote</h2>
-        <form id="quote-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            <label for="age">Age:</label>
-            <input type="number" id="age" required>
-            <label for="landSize">Land Size (sq ft):</label>
-            <input type="number" id="landSize" required>
-            <button type="submit">Submit</button>
-        </form>
-        <div id="quoteResult"></div>
-    </section>
+    </div>
 
     <!-- Testimonials Section -->
     <section id="testimonials">
         
       <div class="testimonial-card">
-        <h2>Customer Testimonials</h2>
+        <div >
+            <img  class="profile-image"src="https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile image">
+            <h2>Lula Inacio</h2>
+        </div>
         <blockquote>"Amazing service! Highly recommend!" - John D.</blockquote>
         <blockquote>"Great prices and professional team." - Sarah K.</blockquote>
         <blockquote>"Fast and efficient snow removal." - Mike R.</blockquote>
       </div>
       <div class="testimonial-card">
-        <h2>Customer Testimonials</h2>
+        <div >
+            <img  class="profile-image"src="https://plus.unsplash.com/premium_photo-1664536392779-049ba8fde933?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile image">
+            <h2>Mesias Bolsonaro</h2>
+        </div>
         <blockquote>"Amazing service! Highly recommend!" - John D.</blockquote>
         <blockquote>"Great prices and professional team." - Sarah K.</blockquote>
         <blockquote>"Fast and efficient snow removal." - Mike R.</blockquote>
       </div>
       <div class="testimonial-card">
-        <h2>Customer Testimonials</h2>
+        <div >
+            <img  class="profile-image"src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile image">
+            <h2>José Temer</h2>
+        </div>
         <blockquote>"Amazing service! Highly recommend!" - John D.</blockquote>
         <blockquote>"Great prices and professional team." - Sarah K.</blockquote>
         <blockquote>"Fast and efficient snow removal." - Mike R.</blockquote>
@@ -180,20 +195,23 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: info@greenscapeservices.com</p>
-        <p>Phone: 555-123-4567</p>
-        <p>Address: 123 Green Street, Springfield</p>
-        <div id="map">
-            <!-- Add a placeholder for the map -->
+       <div class="contact-items">
+        <div class="contact-info"> 
+            <p><strong>Email:</strong> info@snowservices.com</p>
+            <p><strong>Phone:</strong> 555-123-4567</p>
+            <p><strong>Address:</strong> 123 Green Street, Springfield</p>
         </div>
+        <div class="map-image" ></div>
+       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 GreenScape Services. Created by Ettore.</p>
         <a href="#">Facebook</a>
         <a href="#">Instagram</a>
         <a href="#">Twitter</a>
+        <p>&copy; 2024 snow services Services. Created by Gabriel Puertas.</p>
+        
     </footer>
 
     <script src="./scripts.js"></script>
