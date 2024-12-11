@@ -67,32 +67,45 @@ header nav ul li a:hover {
   width: 100%;
 }
 
-#hero div .hero-text {
-  text-align: justify;
-  color: white;
-  width: 50%;
+#hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 2rem;
+  border-radius: 8px;
 }
 
-#hero div  .hero-text h1 {
+#hero .hero-text h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+
 }
 
 #hero .hero-text p {
   max-width: 55%;
+  font-size: 1.3rem;
 }
 
 
 
-#hero .hero-form {
-  height: 350px;
-  background-color: white;
+#hero .hero-button  { 
+  width: 50%;
+}
+
+#hero .hero-button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #fa3c56;
+  border-radius: 8px;
   padding: 2rem;
 }
 
-#hero .hero-form form {
- 
-}
+
 
 #objective {
   background-color: #f4f4f4;
